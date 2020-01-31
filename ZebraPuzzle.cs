@@ -28,7 +28,7 @@ public static class ZebraPuzzle
 {
     public static IEnumerable<House> SolveRiddle()
     {
-        var allHouses = new[]{new House()};
+        House[] allHouses = new House[5];
         allHouses.Select((x, i) => x.number = (Number)i);
         foreach (House house in allHouses)
         {
@@ -76,6 +76,7 @@ public static class ZebraPuzzle
                 house.smoke = Smoke.Parliaments;
             if (house.smoke == Smoke.Parliaments)
                 house.nationality = Nationality.Japanese;
+            
         }
         
         return allHouses;
